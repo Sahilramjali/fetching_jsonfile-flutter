@@ -50,8 +50,8 @@ class _ListJsonDataState extends State<ListJsonData> {
                           padding: EdgeInsets.all(8),
                           child: Padding(
                             padding: const EdgeInsets.all(8.0),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.start,
+                            child: Wrap(
+                              direction: Axis.vertical,
                               //crossAxisAlignment: CrossAxisAlignment.center,
                               children: [
                                 Padding(
@@ -59,13 +59,10 @@ class _ListJsonDataState extends State<ListJsonData> {
                                   child: Column(
                                     mainAxisAlignment: MainAxisAlignment.center,
                                     children: [
-                                      Padding(
-                                        padding: const EdgeInsets.fromLTRB(
-                                            0, 0, 5, 0),
-                                        child: Center(
-                                          child: Text("country name : " +
-                                              item[index].name.toString()),
-                                        ),
+                                      Text(
+                                        "country name : " +
+                                            item[index].name.toString(),
+                                        textAlign: TextAlign.justify,
                                       ),
                                       Text("dial code : " +
                                           item[index].dial_code.toString()),
