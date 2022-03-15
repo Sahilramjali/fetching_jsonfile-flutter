@@ -44,23 +44,39 @@ class _ListJsonDataState extends State<ListJsonData> {
                       elevation: 4,
                       margin: const EdgeInsets.symmetric(
                           horizontal: 10, vertical: 6),
-                      child: Container(
-                        padding: EdgeInsets.all(8),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          //crossAxisAlignment: CrossAxisAlignment.center,
-                          children: [
-                            Column(
-                              mainAxisAlignment: MainAxisAlignment.center,
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Container(
+                          padding: EdgeInsets.all(8),
+                          child: Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              //crossAxisAlignment: CrossAxisAlignment.center,
                               children: [
-                                Text("country name : " +
-                                    item[index].name.toString()),
-                                Text("dial code : " +
-                                    item[index].dial_code.toString()),
-                                Text("code : " + item[index].code.toString()),
+                                Padding(
+                                  padding: const EdgeInsets.all(8.0),
+                                  child: Column(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: [
+                                      Padding(
+                                        padding: const EdgeInsets.fromLTRB(
+                                            0, 0, 5, 0),
+                                        child: Center(
+                                          child: Text("country name : " +
+                                              item[index].name.toString()),
+                                        ),
+                                      ),
+                                      Text("dial code : " +
+                                          item[index].dial_code.toString()),
+                                      Text("code : " +
+                                          item[index].code.toString()),
+                                    ],
+                                  ),
+                                )
                               ],
-                            )
-                          ],
+                            ),
+                          ),
                         ),
                       ));
                 },
